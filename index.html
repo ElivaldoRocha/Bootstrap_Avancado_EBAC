@@ -1,0 +1,361 @@
+<!-- Declaração do tipo de documento HTML e definição da língua como português do Brasil -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Configuração do conjunto de caracteres para UTF-8 -->
+    <meta charset="UTF-8" />
+    <!-- Configuração da viewport para que a página seja responsiva -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título da página -->
+    <title>Bootstrap Avançado</title>
+    <!-- Inclusão do arquivo CSS do Bootstrap -->
+    <link rel="stylesheet" href="./lib/bootstrap.min.css" />
+    <!-- Estilos personalizados para o carrossel -->
+    <style>
+      .carousel {
+        max-width: 1200px;
+        margin: 30px auto;
+      }
+
+      .carousel-inner img {
+        height: 800px; /* Define a altura fixa para as imagens do carrossel */
+        object-fit: contain; /* Garante que as imagens se ajustem dentro da altura definida */
+        width: 100%;
+      }
+
+      .custom-rounded .carousel-inner img {
+        border-radius: 15px; /* Define o raio da borda das imagens do carrossel */
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        filter: invert(100%); /* Inverte a cor dos ícones */
+      }
+
+      .carousel-fade .carousel-item {
+        transition: opacity 1s ease-in-out; /* Define a duração da transição fade para 2 segundos */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Título principal da página -->
+    <h1 class="text-center my-4">
+      Análise Ambiental da Degradação por Queimadas em Santarém - PA
+    </h1>
+
+    <h2 class="text-center my-4">
+      Área Estadual de Proteção Ambiental - Paytuna
+      <br />
+      Consequências na Qualidade do Ar na Área Urbana
+      <br />
+      <br />
+      Outubro a Novembro de 2023
+    </h2>
+
+    <!-- Carrossel de Imagens -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide carousel-fade custom-rounded"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
+      <!-- Itens do Carrossel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./assets/Focos_Registrados.png"
+            class="d-block w-100"
+            alt="Focos de Incêndio Registrados"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/APA.png"
+            class="d-block w-100"
+            alt="Área de Proteção Ambiental"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/APA_Satelite.png"
+            class="d-block w-100"
+            alt="Imagem de Satélite da APA"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/APA_Satelite_RdNBR.png"
+            class="d-block w-100"
+            alt="Imagem RdNBR da APA"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/Vento_Predominante.png"
+            class="d-block w-100"
+            alt="Vento Predominante na Região"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/Dispercao_APA.png"
+            class="d-block w-100"
+            alt="Dispersão de Partículas na APA"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/Metar.png"
+            class="d-block w-100"
+            alt="Dados METAR"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/Metar_Visibilidade.png"
+            class="d-block w-100"
+            alt="Visibilidade METAR"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/Qualidade_do_Ar.png"
+            class="d-block w-100"
+            alt="Qualidade do Ar"
+          />
+        </div>
+      </div>
+      <!-- Controles "Prev" e "Next" -->
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+    <!-- Layout com Grid e Cards -->
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card">
+            <img
+              src="./assets/Focos_Registrados.png"
+              class="card-img-top"
+              alt="Focos de Incêndio Registrados"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Focos de Incêndio Registrados</h5>
+              <p class="card-text">
+                Análise dos focos de incêndio registrados na área de proteção
+                ambiental e suas implicações.
+              </p>
+              <a
+                href="https://g1.globo.com/jornal-nacional/noticia/2023/11/02/santarem-pa-e-encoberta-por-fumaca-das-queimadas-provocadas-pelo-desmatamento-ilegal-na-regiao.ghtml"
+                target="_blank"
+                class="btn btn-primary"
+                >Ler sobre</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card">
+            <img
+              src="./assets/APA.png"
+              class="card-img-top"
+              alt="Área de Proteção Ambiental"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Área de Proteção Ambiental</h5>
+              <p class="card-text">
+                Detalhes sobre a área de proteção ambiental Paytuna e sua
+                importância ecológica.
+              </p>
+              <a
+                href="https://g1.globo.com/jornal-nacional/noticia/2023/11/02/santarem-pa-e-encoberta-por-fumaca-das-queimadas-provocadas-pelo-desmatamento-ilegal-na-regiao.ghtml"
+                target="_blank"
+                class="btn btn-primary"
+                >Ler sobre</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card">
+            <img
+              src="./assets/APA_Satelite.png"
+              class="card-img-top"
+              alt="Imagem de Satélite da APA"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Imagem de Satélite da APA</h5>
+              <p class="card-text">
+                Visualização da área de proteção ambiental através de imagens de
+                satélite recentes.
+              </p>
+              <a
+                href="https://g1.globo.com/jornal-nacional/noticia/2023/11/02/santarem-pa-e-encoberta-por-fumaca-das-queimadas-provocadas-pelo-desmatamento-ilegal-na-regiao.ghtml"
+                target="_blank"
+                class="btn btn-primary"
+                >Ler sobre</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card">
+            <img
+              src="./assets/APA_Satelite_RdNBR.png"
+              class="card-img-top"
+              alt="Imagem RdNBR da APA"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Imagem RdNBR da APA</h5>
+              <p class="card-text">
+                Análise das áreas queimadas na APA utilizando o índice RdNBR.
+              </p>
+              <a
+                href="https://g1.globo.com/jornal-nacional/noticia/2023/11/02/santarem-pa-e-encoberta-por-fumaca-das-queimadas-provocadas-pelo-desmatamento-ilegal-na-regiao.ghtml"
+                target="_blank"
+                class="btn btn-primary"
+                >Ler sobre</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card">
+            <img
+              src="./assets/Vento_Predominante.png"
+              class="card-img-top"
+              alt="Vento Predominante na Região"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Vento Predominante na Região</h5>
+              <p class="card-text">
+                Estudo das condições de vento predominante e seus efeitos na
+                dispersão de partículas.
+              </p>
+              <a
+                href="https://g1.globo.com/jornal-nacional/noticia/2023/11/02/santarem-pa-e-encoberta-por-fumaca-das-queimadas-provocadas-pelo-desmatamento-ilegal-na-regiao.ghtml"
+                target="_blank"
+                class="btn btn-primary"
+                >Ler sobre</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card">
+            <img
+              src="./assets/Dispercao_APA.png"
+              class="card-img-top"
+              alt="Dispersão de Partículas na APA"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dispersão de Partículas na APA</h5>
+              <p class="card-text">
+                Análise da dispersão de partículas finas na área de proteção
+                ambiental.
+              </p>
+              <a
+                href="https://g1.globo.com/jornal-nacional/noticia/2023/11/02/santarem-pa-e-encoberta-por-fumaca-das-queimadas-provocadas-pelo-desmatamento-ilegal-na-regiao.ghtml"
+                target="_blank"
+                class="btn btn-primary"
+                >Ler sobre</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card">
+            <img
+              src="./assets/Metar.png"
+              class="card-img-top"
+              alt="Dados METAR"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dados METAR</h5>
+              <p class="card-text">
+                Relatório METAR com dados meteorológicos - Aeroporto
+                Internacional de Santarém.
+              </p>
+              <a
+                href="https://g1.globo.com/jornal-nacional/noticia/2023/11/02/santarem-pa-e-encoberta-por-fumaca-das-queimadas-provocadas-pelo-desmatamento-ilegal-na-regiao.ghtml"
+                target="_blank"
+                class="btn btn-primary"
+                >Ler sobre</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card">
+            <img
+              src="./assets/Metar_Visibilidade.png"
+              class="card-img-top"
+              alt="Visibilidade METAR"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Visibilidade METAR</h5>
+              <p class="card-text">
+                Dados de visibilidade extraídos dos relatórios METAR - Aeroporto
+                Internacional de Santarém.
+              </p>
+              <a
+                href="https://g1.globo.com/jornal-nacional/noticia/2023/11/02/santarem-pa-e-encoberta-por-fumaca-das-queimadas-provocadas-pelo-desmatamento-ilegal-na-regiao.ghtml"
+                target="_blank"
+                class="btn btn-primary"
+                >Ler sobre</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card">
+            <img
+              src="./assets/Qualidade_do_Ar.png"
+              class="card-img-top"
+              alt="Qualidade do Ar"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Qualidade do Ar</h5>
+              <p class="card-text">
+                Monitoramento da qualidade do ar na área urbana de Santarém.
+              </p>
+              <a
+                href="https://g1.globo.com/jornal-nacional/noticia/2023/11/02/santarem-pa-e-encoberta-por-fumaca-das-queimadas-provocadas-pelo-desmatamento-ilegal-na-regiao.ghtml"
+                target="_blank"
+                class="btn btn-primary"
+                >Ler sobre</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Inclusão do arquivo JavaScript do Bootstrap -->
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
